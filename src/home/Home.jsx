@@ -6,6 +6,7 @@ import Events from "../events/Events";
 import newsData from '../data/newsData.json'
 import newsEvents from '../data/newsEvents.json'
 import Menu from '../menu/Menu.jsx'
+import menuImage from '../assets/img/menu.png'
 
 function Home() {
   const [selectedNews, setSelectedNews] = useState(null);
@@ -32,7 +33,7 @@ function Home() {
       <div className="head" id="head">
         <div className="buttonMenuHead" id="buttonMenuHead">
           <button className="buttonMenu" id="buttonMenu" onClick={toogleMenu}>
-            <span class="material-symbols-outlined">menu</span>
+            <img src={menuImage} alt="" />
           </button>
         </div>
 
