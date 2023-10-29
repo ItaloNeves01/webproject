@@ -1,0 +1,17 @@
+.events-card {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 250px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin: 10px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: solid black;
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+  }
