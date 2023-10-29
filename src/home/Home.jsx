@@ -3,10 +3,11 @@ import "./home.css";
 import NewsCard from "../cards/NewsCard";
 import NewsDetails from "../cards/NewsDetails";
 import Events from "../events/Events";
-import newsData from '../data/newsData.json'
-import newsEvents from '../data/newsEvents.json'
-import Menu from '../menu/Menu.jsx'
-import menuImage from '../assets/img/menu.png'
+import newsData from "../data/newsData.json";
+import newsEvents from "../data/newsEvents.json";
+import Menu from "../menu/Menu.jsx";
+import menuImage from "../assets/img/menu.png";
+import "./webHome.css";
 
 function Home() {
   const [selectedNews, setSelectedNews] = useState(null);
@@ -22,80 +23,93 @@ function Home() {
     setSelectedEvent(selectedEventItem);
   };
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toogleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  }
+  };
 
   return (
-    <div className="home-container">
-      <div className="head" id="head">
-        <div className="buttonMenuHead" id="buttonMenuHead">
-          <button className="buttonMenu" id="buttonMenu" onClick={toogleMenu}>
-            <img src={menuImage} alt="" />
-          </button>
-        </div>
+    <div className="body">
+      <div className="home-container">
+        <div className="head" id="head">
+          <div className="buttonMenuHead" id="buttonMenuHead">
+            <button className="buttonMenu" id="buttonMenu" onClick={toogleMenu}>
+              <img src={menuImage} alt="" />
+            </button>
+          </div>
 
-        <div className="headMain" id="headMain">
-          <p>CAD</p>
-        </div>
-      </div>
-
-      <div className="mainBody" id="mainBody">
-        <div className="noticias" id="noticias">
           <div className="headMain" id="headMain">
-            <p>Notícias</p>
+            <p>CAD</p>
           </div>
 
-          <div className="noticiasCard" id="noticiasCard">
-            {newsData.map((news) => (
-              <NewsCard
-                key={news.id}
-                title={news.title}
-                content={news.content}
-                onClick={() => handleCardClick(news.id)}
-              />
-            ))}
+          <div className="listItems">
+            <ul>
+              <li>Atlas da diabete</li>
+              <li>Dicas</li>
+              <li>Nutrição</li>
+              <li>Atividades físicas</li>
+            </ul>
           </div>
         </div>
 
-        {/*events*/}
-        <div className="events" id="events">
-          <div className="eventsHead">
-            <p>Eventos</p>
+        <div className="line"></div>
+
+        <div className="mainBody" id="mainBody">
+          <div className="noticias" id="noticias">
+            <div className="headMain" id="headMain">
+              <p>Informações</p>
+            </div>
+
+            <div className="noticiasCard" id="noticiasCard">
+              {newsData.map((news) => (
+                <NewsCard
+                  key={news.id}
+                  title={news.title}
+                  content={news.content}
+                  onClick={() => handleCardClick(news.id)}
+                />
+              ))}
+            </div>
           </div>
 
-          <div className="eventsCard" id="EventsCards">
-            {newsEvents.map((event) => (
-              <Events
-                key={event.id}
-                title={event.title}
-                content={event.content}
-                onClick={() => handleCardClick(event.id, true)}
-              />
-            ))}
+          {/*events*/}
+          <div className="events" id="events">
+            <div className="eventsHead">
+              <p>Eventos</p>
+            </div>
+
+            <div className="eventsCard" id="EventsCards">
+              {newsEvents.map((event) => (
+                <Events
+                  key={event.id}
+                  title={event.title}
+                  content={event.content}
+                  onClick={() => handleCardClick(event.id, true)}
+                />
+              ))}
+            </div>
           </div>
+
+          {selectedNews && (
+            <NewsDetails
+              title={selectedNews.title}
+              content={selectedNews.content}
+              onClose={() => setSelectedNews(null)}
+            />
+          )}
+
+          {selectedEvent && (
+            <Events
+              title={selectedEvent.title}
+              content={selectedEvent.content}
+              onClick={() => setSelectedEvent(null)}
+            />
+          )}
         </div>
 
-        {selectedNews && (
-          <NewsDetails
-            title={selectedNews.title}
-            content={selectedNews.content}
-            onClose={() => setSelectedNews(null)}
-          />
-        )}
-
-        {selectedEvent && (
-          <Events
-            title={selectedEvent.title}
-            content={selectedEvent.content}
-            onClick={() => setSelectedEvent(null)}
-          />
-        )}
+        <Menu isOpen={isMenuOpen} onClose={toogleMenu} />
       </div>
-
-      <Menu isOpen={isMenuOpen} onClose={toogleMenu}/>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import './EventsCard.css';
+import './webEvents.css';
 import eventimg from  '../assets/img/local.png'
 
 const Events = ({ title, content, onClick }) => {

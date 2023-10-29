@@ -1,5 +1,5 @@
-@media screen and (max-width: 600px) {
-  .news-card {
+@media screen and (min-width: 601px) {
+  .events-card {
     flex: 0 0 auto;
     width: 250px;
     height: auto;
@@ -16,5 +16,4 @@
     background-color: black;
     border-radius: 20px;
   }
-
 }

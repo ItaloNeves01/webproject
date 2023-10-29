@@ -1,5 +1,6 @@
 import React from 'react';
 import './NewsDetails.css';
+import './webDetails.css'
 
 const NewsDetails = ({ title, content, onClose }) => {
   return (
@@ -7,7 +8,6 @@ const NewsDetails = ({ title, content, onClose }) => {
       <div className="news-details-card">
         <p>{title}</p>
         <p>{content}</p>
-        <button onClick={onClose}>Fechar</button>
       </div>
     </div>
   );

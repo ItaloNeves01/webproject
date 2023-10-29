@@ -1,11 +1,8 @@
-.material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
+@media screen and (max-width: 600px) {
+  .material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
   }
-.menu {
+  .menu {
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -20,23 +17,23 @@
     visibility: hidden;
     transition: opacity 0.5s ease-in-out;
   }
-  
+
   .menu.open {
     opacity: 1;
     visibility: visible;
   }
-  
+
   .menu ul {
     list-style: none;
     padding: 0;
   }
-  
+
   .menu li {
     margin-bottom: 10px;
     font-size: 20px;
-    border-bottom:  solid 2px ;
+    border-bottom: solid 2px;
   }
-  
+
   .menu button {
     margin-top: 20px;
     padding: 10px;
@@ -49,4 +46,13 @@
 
     background-color: transparent;
   }
-  
+}
+
+
+@media screen and (min-width: 601px) {
+  .menu{
+    display: none;
+  }
+
+
+}

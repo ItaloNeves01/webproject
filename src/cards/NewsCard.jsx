@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NewsCard.css';
+import './webNewsCard.css'
 import imageMedico from '../assets/img/medico.png'
 
 const NewsCard = ({ title, content, onClick }) => {

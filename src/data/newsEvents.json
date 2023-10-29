@@ -1,5 +1,7 @@
 [
-    { "id": 1, "title": "evento 1", "content": "evento 1" },
-    { "id": 2, "title": "evento 2", "content": "evento 2" }
+    { "id": 1, "title": "noticia 1", "content": "n 1" },
+    { "id": 2, "title": "noticia 2", "content": "n 2" },
+    { "id": 3, "title": "noticia 3", "content": "n 3" },
+    { "id": 4, "title": "noticia 4", "content": "n 4" }
   ]
   
