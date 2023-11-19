@@ -73,24 +73,6 @@ function Home() {
             </div>
           </div>
 
-          {/*events*/}
-          <div className="events" id="events">
-            <div className="eventsHead">
-              <p>Eventos</p>
-            </div>
-
-            <div className="eventsCard" id="EventsCards">
-              {newsEvents.map((event) => (
-                <Events
-                  key={event.id}
-                  title={event.title}
-                  content={event.content}
-                  onClick={() => handleCardClick(event.id, true)}
-                />
-              ))}
-            </div>
-          </div>
-
           {selectedNews && (
             <NewsDetails
               title={selectedNews.title}

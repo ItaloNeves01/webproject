@@ -36,12 +36,14 @@
         background-color: transparent;
         border: none;
     }
-    .noticiasCard {
-        overflow-x: scroll;
+    .noticiasCard { 
+        display: flex;
+        flex-direction: column;
+        overflow-y: scroll;
         white-space: nowrap;
         display: flex;
-        height: 300px;
-        width: 350px;
+        height: 90%;
+        width: 100%;
 
     }
     .mainBody{
