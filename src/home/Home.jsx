@@ -65,6 +65,7 @@ function Home() {
               {newsData.map((news) => (
                 <NewsCard
                   key={news.id}
+                  id={news.id} 
                   title={news.title}
                   content={news.content}
                   onClick={() => handleCardClick(news.id)}

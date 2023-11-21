@@ -17,4 +17,10 @@
     border-radius: 20px;
   }
 
+  .news-card img {
+    width: 90%; /* Ajusta a largura da imagem para ocupar 100% do container */
+    height: 80%; /* Ajusta a altura da imagem para ocupar 100% do container */
+    object-fit: cover; /* Faz com que a imagem cubra completamente o container mantendo a proporção */
+    border-radius: 20px; /* Adiciona borda arredondada à imagem, se desejado */
+  }
 }
