@@ -13,10 +13,12 @@
     .line{
         display: none;
     }
+    .asaide{text-align: center;
+    margin: 10px;}
     .head {
         height: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         color: black;
         margin: 0; 

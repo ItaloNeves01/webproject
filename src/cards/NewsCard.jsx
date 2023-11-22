@@ -8,6 +8,7 @@ import img4 from "../assets/img/img4.png";
 import img5 from "../assets/img/img5.png";
 import img6 from "../assets/img/img6.png";
 import img7 from "../assets/img/img7.png";
+import img8 from "../assets/img/img8.png";
 import img9 from "../assets/img/img9.png";
 import img10 from "../assets/img/img10.png";
 
@@ -47,6 +48,10 @@ const NewsCard = ({ id, title, content, onClick }) => {
         case 7:
             imageSource = img7;
             break;
+        case 8:
+            imageSource = img8;
+            break;
+            
         case 9:
             imageSource = img9;
             break;

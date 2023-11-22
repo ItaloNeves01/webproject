@@ -33,6 +33,11 @@ function Home() {
     <div className="body">
       <div className="home-container">
         <div className="head" id="head">
+          <div className="buttonMenuHead" id="buttonMenuHead">
+            <button className="buttonMenu" id="buttonMenu" onClick={toogleMenu}>
+              <img src={menuImage} alt="" />
+            </button>
+          </div>
 
           <div className="headMain" id="headMain">
             <p>CAD</p>
@@ -48,11 +53,7 @@ function Home() {
           </div>
         </div>
 
-
-        <div className="asaide">
-          <p>Nossa missão é informar e orientar</p>
-        </div>
-
+        <div className="line"></div>
 
         <div className="mainBody" id="mainBody">
           <div className="noticias" id="noticias">
